@@ -133,6 +133,10 @@ body {
     cursor: pointer;
 }
 
+.camper-kick button:disabled {
+    cursor: no-drop;
+}
+
 .camper-kick button:hover {
     background: #a5d7fc;
 }
@@ -147,6 +151,6 @@ body {
     color: #27AE60;
 }
 
-.over{
+.over {
     color: red;
 }

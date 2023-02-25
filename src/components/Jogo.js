@@ -62,7 +62,7 @@ export default function Jogo({ arrayGallowsImages, setbuttonOffOrTrue, palavras,
 
     function verifiedKick() {
         if (textKickObject.textKick != "") {
-            if (textKickObject.textKick == word) {
+            if (textKickObject.textKick == word.join("")) {
                 if (winOrLose == true) {
                     return
                 }
@@ -74,10 +74,13 @@ export default function Jogo({ arrayGallowsImages, setbuttonOffOrTrue, palavras,
                     return
                 }
                 setwinOrlose(false)
+                setnumberLoss(6)
                 setbuttonOffOrTrue(true)
             }
         }
     }
+
+    console.log(word)
 
     verifiedKick()
     altStateLetterClicked()
