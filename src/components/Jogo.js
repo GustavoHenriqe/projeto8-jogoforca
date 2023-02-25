@@ -86,14 +86,16 @@ export default function Jogo({ arrayGallowsImages, setbuttonOffOrTrue, palavras,
     return (
         <>
             <main className="main" >
-                <img className="image-gallows" src={arrayGallowsImages[numberLoss]} />
+                <img data-test="game-image" className="image-gallows" src={arrayGallowsImages[numberLoss]} />
                 <div className="right">
                     <button
                         className="button-random"
+                        data-test="choose-word"
                         onClick={startNewGame}
                     > Escolher Palavra </button>
                     <div
                         className={`camp-laters ${winOrLose == null ? "" : winOrLose ? "win" : "over"}`}
+                        data-test="word"
                     >
                         {word.map(le => {
 

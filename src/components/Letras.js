@@ -28,8 +28,10 @@ export default function Letras({ buttonsOffOrTrue, setletterClicked, settextKick
                         value={valueInputKick} 
                         type="text"
                         onChange={(element) => setvalueInputKick(element.target.value)} 
+                        data-test="guess-input"
                     />
                     <button
+                        data-test="guess-button"
                         onClick={sendTextKick}
                     >
                         Chutar 
@@ -49,6 +51,7 @@ function Buttons({ buttonsOffOrTrue, letter, setletterClicked }) {
 
     return (
         <button
+            data-test="letter"
             disabled={buttonsOffOrTrue}
             className="button-latters"
             onClick={(element) => disabledButton(element)}
