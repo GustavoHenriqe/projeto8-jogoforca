@@ -15,22 +15,30 @@ import gallowsImages5 from "../assets/forca5.png"
 import gallowsImages6 from "../assets/forca6.png"
 
 function App() {
-  const [ buttonsOffOrTrue, setbuttonOffOrTrue ] = useState(true)
-  const [ letterClicked, setletterClicked ] = useState("")
+  const [buttonsOffOrTrue, setbuttonOffOrTrue] = useState(true)
+  const [letterClicked, setletterClicked] = useState("")
 
-  const  _arrayGallowsImages = [gallowsImages0, gallowsImages1, gallowsImages2, gallowsImages3, gallowsImages4, gallowsImages5, gallowsImages6]
+  const [textKick, settextKick] = useState("")
+
+  const _arrayGallowsImages = [gallowsImages0, gallowsImages1, gallowsImages2, gallowsImages3, gallowsImages4, gallowsImages5, gallowsImages6]
 
   return (
     <>
-      <Jogo 
+      <Jogo
         arrayGallowsImages={_arrayGallowsImages}
         palavras={palavras}
         setbuttonOffOrTrue={setbuttonOffOrTrue}
-        letterClicked={letterClicked}
+        letterClickedObject={{
+          letterClicked, setletterClicked
+        }}
+        textKickObject={{
+          textKick, settextKick
+        }}
       />
-      <Letras 
+      <Letras
         buttonsOffOrTrue={buttonsOffOrTrue}
         setletterClicked={setletterClicked}
+        settextKick={settextKick}
       />
     </>
   )

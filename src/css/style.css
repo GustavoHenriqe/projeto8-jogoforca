@@ -69,6 +69,7 @@ body {
 .camp-latters {
     width: 664px;
     height: 91px;
+    margin-bottom: 56px;
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
@@ -96,6 +97,50 @@ body {
     color: #798A9F;
     cursor: no-drop;
     
+}
+
+.camper-kick {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+
+.camper-kick input {
+    width: 353px;
+    height: 40px;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    padding-left: 15px;
+}
+
+.camper-kick input:focus {
+    outline: 0;
+}
+
+.camper-kick button {
+    width: 100px;
+    height: 40px;
+    background: #E1ECF4;
+    border: 1px solid #7AA7C7;
+    border-radius: 3px;
+    color: #7AA7C7;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    cursor: pointer;
+}
+
+.camper-kick button:hover {
+    background: #a5d7fc;
+}
+
+.camper-kick label {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
 }
 
 .win {
